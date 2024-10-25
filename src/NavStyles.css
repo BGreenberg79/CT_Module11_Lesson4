@@ -1,0 +1,22 @@
+nav {
+    background-color: aqua;
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    color: brown;
+    text-align: center;
+    padding: 18px;
+    margin:10px;
+}
+
+nav a:hover{
+    background-color: coral;
+    color:chocolate
+}
+
+nav a.active{
+    background-color: darkgreen !important;
+    color:white !important;
+}
