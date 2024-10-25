@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import './NavStyles.css'
 import NavBar from "./NavBar";
 import CharacterDetailWrapper from "./CharacterDetailsWrapper";
+import NotFound from "./NotFound";
 
 // Task 1.3 Setting Up Routes
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/character-details/:id' element={< CharacterDetailWrapper selectedCharacter={selectedCharacter}/>}/>
         <Route path="/comics/" element={<Comics/>}/>
         <Route path="/" element={<Home/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>
   );
