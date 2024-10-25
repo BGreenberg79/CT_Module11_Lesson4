@@ -1,6 +1,7 @@
 // Task 1.2 Create Route Components
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom"
 
 const BrowseCharacters = ({onSelectedCharacter}) => {
     const [fetchedCharacters, setFetchedCharacters] = useState([]);
@@ -30,6 +31,7 @@ const BrowseCharacters = ({onSelectedCharacter}) => {
                     <li key={character.id}>
                         Name: {character.name} <br />
                         <img onClick={()=>onSelectedCharacter(character)} src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+                        <Link to={`/character-details/${character.id}`} ></Link>
                     </li>
                 ))}
             </ul>
