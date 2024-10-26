@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CharacterDetail = ({selectedCharacter}) => {
+const CharacterDetail = ({id}) => {
     const [detailCharacter, setDetailCharacter] = useState([]);
 
    
@@ -23,8 +23,8 @@ const CharacterDetail = ({selectedCharacter}) => {
             }
         }    
         
-        if (selectedCharacter) retrieveCharacter();
-    }, [selectedCharacter]);
+        if (id) retrieveCharacter();
+    }, [id]);
 
     return (
         <div>

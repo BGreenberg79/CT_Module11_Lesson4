@@ -31,7 +31,7 @@ const BrowseCharacters = ({onSelectedCharacter}) => {
                     <li key={character.id}>
                         Name: {character.name} <br />
                         <img onClick={()=>onSelectedCharacter(character)} src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
-                        <Link to={`/character-details/${character.id}`} ></Link>
+                        <Link to={`/character-details/${character.id}`} >Details</Link>
                     </li>
                 ))}
             </ul>
